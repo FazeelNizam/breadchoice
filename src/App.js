@@ -9,12 +9,12 @@ import Spinner from './components/Spinner/Spinner'
 
 function App() {
   const [loading, setLoading] = useState(false)
-  // useEffect(() => {
-  //   setLoading(true)
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 3000)
-  // }, [])
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
   return (
     <AnimatePresence mode="wait">
       <div>
