@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import { Route, Routes } from 'react-router-dom'
+
+import NavBar from './components/NavBar'
+import MainContainer from './components/MainContainer'
+import CreateContainer from './components/CreateContainer'
+import Spinner from './components/Spinner/Spinner'
 
 function App() {
+  const [loading, setLoading] = useState(false)
+  // useEffect(() => {
+  //   setLoading(true)
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 3000)
+  // }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AnimatePresence mode="wait">
+      <div>
+        {loading ? (
+          <div>
+            <Spinner />
+          </div>
+        ) : (
+          <div>
+            <NavBar />
+
+            <main>
+              <Routes>
+                <Route path="/*" element={<MainContainer />} />
+                <Route path="/createitem" element={<CreateContainer />} />
+              </Routes>
+            </main>
+          </div>
+        )}
+      </div>
+    </AnimatePresence>
+  )
 }
 
-export default App;
+export default App
