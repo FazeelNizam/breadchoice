@@ -9,7 +9,7 @@ nav {
 nav::after {
   position: absolute;
   content: '';
-  top: 66px;
+  top: 66.2px;
   height: 3px;
   width: 100%;
   filter: blur(5px);
@@ -27,15 +27,6 @@ nav::after {
   );
   background-size: 200% 200%;
   animation: animateGlow 1.25s linear infinite;
-}
-
-@keyframes animateGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
 }
 
 nav .navbar {
@@ -94,25 +85,26 @@ nav .navbar .menu li a:hover {
 }
 
 .user-section {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
   margin-left: 30px;
 }
 
-.user-section .user-icon {
+.user-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
-.user-section .user-icon img {
-  width: 30px;
-  height: 30px;
+.user-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .user-section .cart-icon {
@@ -131,6 +123,111 @@ nav .hamberger {
   display: none;
 }
 
+/* user details menu */
+
+.user-details-container {
+  position: fixed;
+  display: flex;
+  top: 70px;
+  right: 0;
+  width: 40%;
+  z-index: 900;
+  background-color: #ffffffe9;
+}
+
+.user-details-container .overlay {
+  position: absolute;
+  z-index: 1000;
+  top: 90%;
+  width: 100%;
+  height: 20px;
+  background-color: #ffffffe9;
+}
+
+.user-details-container::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  height: 3px;
+  width: 95%;
+  filter: blur(5px);
+  background: linear-gradient(
+    to left,
+    #ff5770,
+    #e4428d,
+    #c42da8,
+    #9e16c3,
+    #6501de,
+    #9e16c3,
+    #c42da8,
+    #e4428d,
+    #ff5770
+  );
+  background-size: 200% 200%;
+  animation: animateGlow 1.25s linear infinite;
+}
+
+.user-details-menu {
+  padding: 20px 30px 20px 30px;
+  width: 100%;
+}
+
+.user-details-menu hr {
+  height: 2px;
+  width: 100%;
+  background: #1d1d1f;
+  border: none;
+}
+
+.user-details-menu .user-icon {
+  justify-content: left;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.user-icon .u-details {
+  display: flex;
+  flex-direction: column;
+  gap: -2px;
+}
+
+.u-details .u-name {
+  color: #1d1d1f;
+  font-weight: 700;
+}
+
+.u-details .u-mail {
+  color: #1d1d1f;
+  font-size: 12px;
+}
+
+.user-icon .logout {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+.user-details-menu .add-new-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 55px;
+}
+
+.add-new-item a {
+  text-decoration: none;
+  color: #1d1d1f;
+}
+
+.add-new-item a svg {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
 .mobile-menu {
   display: none;
 }
@@ -146,6 +243,10 @@ nav .hamberger {
     display: none;
   }
 
+  .user-details-container {
+    display: none;
+  }
+
   nav .navbar {
     padding-left: 50px;
     padding-right: 50px;
@@ -158,6 +259,7 @@ nav .hamberger {
   .mobile-menu {
     position: fixed;
     display: flex;
+    z-index: 900;
     background-color: #ffffffe9;
     right: 1px;
     top: 70px;
@@ -165,8 +267,46 @@ nav .hamberger {
     height: 100%;
   }
 
+  .mobile-menu .overlay {
+    position: absolute;
+    z-index: 1000;
+    width: 20px;
+    height: 100%;
+    background-color: #ffffffe9;
+  }
+
+  .mobile-menu::after {
+    position: absolute;
+    content: '';
+    right: 100%;
+    height: 100%;
+    width: 2.12px;
+    filter: blur(5px);
+    background: linear-gradient(
+      to bottom,
+      #ff5770,
+      #e4428d,
+      #c42da8,
+      #9e16c3,
+      #6501de,
+      #9e16c3,
+      #c42da8,
+      #e4428d,
+      #ff5770
+    );
+    background-size: 200% 200%;
+    animation: animateGlowVertical 1.25s linear infinite;
+  }
+
   .mobile-menu-list {
     padding: 10px 30px 0 30px;
+    width: 100%;
+  }
+
+  .user-icon-container .user-icon {
+    justify-content: left;
+    gap: 25px;
+    margin-bottom: 0;
     width: 100%;
   }
 
@@ -178,19 +318,9 @@ nav .hamberger {
     gap: 10px;
   }
 
-  .mobile-menu-list .user-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  .mobile-menu-list .user-icon img {
     width: 55px;
     height: 55px;
-    border-radius: 50%;
-  }
-
-  .mobile-menu-list .user-icon img {
-    width: 30px;
-    height: 30px;
   }
 
   .mobile-menu-list li {
@@ -215,6 +345,20 @@ nav .hamberger {
   .mobile-menu-list li a:hover {
     color: #000000;
   }
+
+  .mobile-menu-list li svg {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .menu-login {
+    cursor: pointer;
+  }
+
+  .menu-login svg {
+    font-size: 24px;
+    margin-left: 10px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -228,4 +372,24 @@ nav .hamberger {
 
 .main-container {
   padding-top: 50px;
+}
+
+/* animations */
+
+@keyframes animateGlowVertical {
+  0% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 50% 200%;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }

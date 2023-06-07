@@ -30,17 +30,12 @@ body {
 }
 
 &::after {
-  /* top: 55%;
-  right: -55.3%;
-  height: 5px;
-  width: 110%;
-  transform: rotate(90deg); */
   position: fixed;
   content: '';
   right: 1px;
   top: 50px;
   height: 100%;
-  width: 2px;
+  width: 3px;
   filter: blur(5px);
   background: linear-gradient(
     to bottom,
