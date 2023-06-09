@@ -454,7 +454,7 @@ nav .hamberger {
   margin-left: 0.5rem;
 }
 
-.banner .shop-btn {
+.shop-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,7 +470,7 @@ nav .hamberger {
   background-color: #000000;
 }
 
-.banner .shop-btn .bascket {
+.shop-btn .bascket {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,18 +517,10 @@ nav .hamberger {
   margin-top: -20%;
 }
 
-.image-container .collage .bun-bucket {
-  position: absolute;
-  z-index: 200;
-  margin-top: 3%;
-  margin-left: -10%;
-}
-
 .image-container .collage .grain-bag {
   position: absolute;
   z-index: 200;
   margin-top: 3%;
-  margin-left: 11%;
 }
 
 .banner .text-container {
@@ -564,12 +556,72 @@ nav .hamberger {
 .banner .right-section {
   flex: 1;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .right-section .black-bg {
   position: absolute;
+  z-index: 100;
   right: 0;
   bottom: 0;
+  width: 80%;
+}
+
+.right-section .right-top {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+}
+
+.right-section .right-bottom {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  padding-right: 1rem;
+  flex-direction: row;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+}
+
+.right-section .right-bottom .right-botton-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  gap: 3rem;
+}
+
+.right-section .right-bottom .shop-btn {
+  background-color: #f8f8f89a;
+  color: #000000;
+  height: 52px;
+  padding-left: 55px;
+  position: relative;
+  border: none;
+}
+
+.right-section .right-bottom .shop-btn .bascket {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  border-width: 3px;
+}
+
+.right-section .right-image-container {
+  flex: 1;
+  display: flex;
+  right: 0;
 }
 
 /* animations */
