@@ -91,7 +91,7 @@ const NavBar = () => {
                 <img src={user ? user.photoURL : Avatar} alt="avatar" />
               </motion.div>
               <div className="hamberger">
-                <Hamburger toggled={isOpen} toggle={setOpen} />
+                <Hamburger toggled={isOpen} toggle={setOpen} size={30} />
               </div>
             </div>
           </div>

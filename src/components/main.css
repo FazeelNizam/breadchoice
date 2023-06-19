@@ -368,6 +368,63 @@ nav .hamberger {
   }
 }
 
+@media screen and (max-width: 520px) {
+  nav .navbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  nav .navbar {
+    height: 60px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .user-section .cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .user-icon .logout {
+    padding-left: 0;
+  }
+
+  .user-icon-container .user-icon {
+    gap: 10px;
+  }
+
+  .mobile-menu-list .user-icon img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .mobile-menu-list li {
+    font-size: 90%;
+  }
+
+  .mobile-menu-list li svg {
+    font-size: 18px;
+    margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .mobile-menu-list li {
+    font-size: 80%;
+  }
+
+  .user-icon-container .user-icon {
+    gap: 7px;
+  }
+
+  .mobile-menu-list .user-icon img {
+    width: 33px;
+    height: 33px;
+  }
+}
+
 /* main Container */
 
 /* banner */
@@ -394,9 +451,6 @@ nav .hamberger {
 
 .banner .left-section {
   flex: 1;
-}
-
-.banner .left-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -514,12 +568,14 @@ nav .hamberger {
 .image-container .collage .chef-1 {
   position: relative;
   z-index: 100;
+  width: 320px;
   margin-top: -20%;
 }
 
 .image-container .collage .grain-bag {
   position: absolute;
   z-index: 200;
+  width: 450px;
   margin-top: 3%;
 }
 
@@ -557,8 +613,8 @@ nav .hamberger {
   flex: 1;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   flex-direction: column;
   gap: 20px;
 }
@@ -568,7 +624,8 @@ nav .hamberger {
   z-index: 100;
   right: 0;
   bottom: 0;
-  width: 80%;
+  width: 100%;
+  height: 60%;
 }
 
 .right-section .right-top {
@@ -579,6 +636,7 @@ nav .hamberger {
   z-index: 200;
   height: 100%;
   width: 100%;
+  background-color: #3f3d09;
 }
 
 .right-section .right-bottom {
@@ -586,7 +644,7 @@ nav .hamberger {
   display: flex;
   align-items: flex-end;
   justify-content: right;
-  padding-right: 1rem;
+  padding-right: 5rem;
   flex-direction: row;
   z-index: 200;
   height: 100%;
@@ -594,11 +652,15 @@ nav .hamberger {
 }
 
 .right-section .right-bottom .right-botton-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  align-items: center;
+  align-items: end;
+  justify-content: end;
   gap: 3rem;
+  padding-left: 1rem;
+  height: 100%;
+  padding-bottom: 10%;
 }
 
 .right-section .right-bottom .shop-btn {
@@ -608,6 +670,7 @@ nav .hamberger {
   padding-left: 55px;
   position: relative;
   border: none;
+  cursor: default;
 }
 
 .right-section .right-bottom .shop-btn .bascket {
@@ -619,9 +682,251 @@ nav .hamberger {
 }
 
 .right-section .right-image-container {
-  flex: 1;
+  flex: 0.4;
   display: flex;
-  right: 0;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  height: 100%;
+}
+
+.right-section .right-image-container img {
+  width: 370px;
+}
+
+/* mobile banner */
+@media screen and (max-width: 1405px) {
+  .right-section .right-bottom {
+    padding-right: 1rem;
+  }
+  .right-section .right-bottom .shop-btn {
+    font-size: 90%;
+    height: 46px;
+    padding-left: 46px;
+  }
+  .right-section .right-bottom .shop-btn .bascket {
+    width: 44px;
+    height: 44px;
+    border-width: 2px;
+  }
+  .right-section .right-image-container img {
+    width: 350px;
+  }
+  .image-container .collage .chef-1 {
+    width: 280px;
+  }
+
+  .image-container .collage .grain-bag {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .banner .left-section p {
+    font-size: 90% !important;
+  }
+
+  .banner .info-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .banner .info-btn svg {
+    font-size: 1.1rem;
+    margin-left: 0.3rem;
+  }
+
+  .banner .left-section .shop-btn {
+    padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    margin-left: 2px;
+  }
+
+  .banner .left-section .shop-btn .bascket {
+    width: 36px;
+    height: 36px;
+    border-width: 1.2px;
+    margin-right: 3px;
+  }
+
+  .banner .shop-btn .bascket img {
+    width: 20px;
+  }
+
+  .image-container .collage .chef-1 {
+    width: 230px;
+  }
+
+  .image-container .collage .grain-bag {
+    width: 350px;
+  }
+  .right-section .right-image-container img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .image-container .collage .chef-1 {
+    width: 190px;
+  }
+
+  .image-container .collage .grain-bag {
+    width: 310px;
+  }
+  .right-section .right-image-container img {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .banner {
+    flex-direction: column;
+    height: 150vh;
+  }
+
+  .banner .banner-intro-container {
+    text-align: center;
+  }
+
+  .banner .button-container {
+    padding: 0;
+    padding-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .banner .right-section {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .banner .left-section p {
+    font-size: 85% !important;
+  }
+
+  .banner .button-container {
+    gap: 3rem;
+  }
+
+  .banner .info-btn {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .banner .info-btn svg {
+    font-size: 1.1rem;
+    margin-left: 0.2rem;
+  }
+
+  .banner .text-container {
+    width: 50%;
+    height: 100%;
+  }
+
+  .text-container .text {
+    width: 60%;
+    height: 100%;
+  }
+
+  .text-container .text .head-line {
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .banner .left-section .shop-btn {
+    padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    margin-left: 2px;
+  }
+
+  .banner .left-section .shop-btn .bascket {
+    width: 33px;
+    height: 33px;
+    border-width: 1.2px;
+    margin-right: 3px;
+  }
+
+  .banner .shop-btn .bascket img {
+    width: 18px;
+  }
+
+  .image-container .collage .chef-1 {
+    width: 160px;
+  }
+
+  .image-container .collage .grain-bag {
+    width: 280px;
+  }
+  .right-section .right-image-container img {
+    width: 230px;
+  }
+
+  .banner .right-section {
+    font-size: 90%;
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .banner .left-section p {
+    font-size: 70% !important;
+  }
+
+  .banner .info-btn {
+    font-size: 1.1rem;
+  }
+
+  .banner .info-btn svg {
+    font-size: 1rem;
+  }
+
+  .banner .left-section .shop-btn {
+    padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+    border-radius: 2rem;
+    font-size: 1rem;
+    margin-left: 2px;
+  }
+
+  .banner .left-section .shop-btn .bascket {
+    width: 26px;
+    height: 26px;
+    border-width: 1px;
+  }
+
+  .banner .shop-btn .bascket img {
+    width: 15px;
+  }
+
+  .image-container .collage .chef-1 {
+    width: 135px;
+  }
+
+  .image-container .collage .grain-bag {
+    width: 230px;
+  }
+  .right-section .right-image-container img {
+    width: 160px;
+  }
+
+  .banner .right-section {
+    font-size: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .right-section .right-bottom .shop-btn {
+    height: 38px;
+    padding-left: 38px;
+  }
+  .right-section .right-bottom .shop-btn .bascket {
+    width: 36px;
+    height: 36px;
+    border-width: 1.5px;
+  }
 }
 
 /* animations */

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import { FaArrowRight } from 'react-icons/fa'
 import Bascket from '../img/whitebascket.png'
@@ -19,22 +20,24 @@ const Banner = () => {
             <div className="banner-intro-container">
               <div className="intro-text">
                 <span className="head-line">
-                  handmade with an extra pinch of love
+                  <p>handmade with an extra pinch of love</p>
                 </span>
                 <span className="sub-text">
-                  we prepare our breads daily and that's where the charming
-                  smell comes from
+                  <p>
+                    we prepare our breads daily and that's where the charming
+                    smell comes from
+                  </p>
                 </span>
                 <div className="button-container">
                   <button className="info-btn">
-                    Get Info
+                    <p>Get Info</p>
                     <FaArrowRight />
                   </button>
                   <button className="shop-btn">
                     <span className="bascket">
                       <img src={Bascket} alt="bascket" />
                     </span>
-                    Online Shop
+                    <p>Online Shop</p>
                   </button>
                 </div>
               </div>
@@ -48,9 +51,13 @@ const Banner = () => {
               </div>
               <div className="text-container">
                 <div className="text">
-                  <span className="head-line">Daily, Fresh & Always Tasty</span>
+                  <span className="head-line">
+                    <p>Daily, Fresh & Always Tasty</p>
+                  </span>
                   <span className="sub-text">
-                    To grt more information contact us or just drop an E-Mail
+                    <p>
+                      To get more information contact us or just drop an E-Mail
+                    </p>
                   </span>
                 </div>
               </div>
@@ -61,21 +68,34 @@ const Banner = () => {
             <div className="right-top"></div>
             <div className="right-bottom">
               <div className="right-botton-container">
-                <button className="shop-btn">
+                <motion.button
+                  className="shop-btn"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.25, type: 'tween' }}
+                >
                   <span className="bascket">
                     <img src={Tick} alt="bascket" />
                   </span>
                   Your Top Choice
-                </button>
-                <button className="shop-btn">
+                </motion.button>
+                <motion.button
+                  className="shop-btn"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.25, type: 'tween' }}
+                >
                   <span className="bascket">
                     <img src={Tick} alt="bascket" />
                   </span>
                   Fastest In The Business
-                </button>
+                </motion.button>
               </div>
               <div className="right-image-container">
-                <img src={Chef2} alt="Chef2" />
+                <motion.img
+                  src={Chef2}
+                  alt="Chef2"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.25, type: 'tween' }}
+                />
               </div>
             </div>
           </div>
